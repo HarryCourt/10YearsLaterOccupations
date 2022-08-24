@@ -7,3 +7,8 @@ TODO:
 
 Planned (But not confirmed):
 * Work with More Traits mod.
+
+How to install:
+1. Download the "10YearsLaterOccupations" folder
+2. Drop into C:\Users\USERNAME\Zomboid\Workshop
+3. Done :)
