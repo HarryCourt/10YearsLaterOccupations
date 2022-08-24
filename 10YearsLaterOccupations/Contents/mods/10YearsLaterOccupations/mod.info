@@ -1,0 +1,5 @@
+name=10YearsLaterOccupations
+id=10YearsLaterOccupations
+description=This mod replaces the default occupations with occupations that would fit 10 Years Later playthroughs.
+require=ProfessionFramework
+poster=poster.png

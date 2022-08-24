@@ -1,0 +1,8 @@
+version=1
+id=2849783808
+title=No More Fresh Food (Hotfix for 10 Years Later + Loot Table Mods)
+description=This is a hotfix to be used for 10 years later scenarios that also incorporate mods that may adjust loot tables.
+description=
+description=this should stop fresh food from spawning in.
+tags=Build 41;Food;Hardmode;Realistic
+visibility=friendsOnly
