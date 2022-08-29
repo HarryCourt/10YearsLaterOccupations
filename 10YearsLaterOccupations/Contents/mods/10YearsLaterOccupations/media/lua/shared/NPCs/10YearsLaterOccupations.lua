@@ -80,7 +80,7 @@ addProfession('builder', {
 addProfession('thief', {
     name = "UI_prof_thief",
     icon = "profession_burglar2",
-    cost = -4,
+    cost = -6,
     xp = {
         [Perks.Nimble] = 2,
         [Perks.Sneak] = 2,
