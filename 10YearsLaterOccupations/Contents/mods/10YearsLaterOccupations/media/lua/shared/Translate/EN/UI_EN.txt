@@ -1,22 +1,22 @@
 UI_EN = {
+    UI_prof_norole = "No Role",
+    UI_profdesc_norole = "Create your own story here.",
+
     UI_prof_common = "Common Survivor",
     UI_profdesc_common = "You are the average run of the mill survivor. A bit of everything into one package.",
 
     UI_prof_hardened = "Hardened Survivor",
-    UI_profdesc_hardened = "You have more skill and experience than the common survivor, with the downside of losing points.",
+    UI_profdesc_hardened = "You have more skill and experience than the common survivor, with the downside of losing points a few more points.",
     
     UI_prof_medic = "Medic",
     UI_profdesc_medic = "You have a huge focus on medicine.",
-
-    UI_prof_scav = "Scavenger",
-    UI_profdesc_scav = "You have a huge emphasis on sneaking. ",
-
-    UI_prof_mech = "Mechanic",
-    UI_profdesc_mech = "With this many destroyed cars laying around, why not spend your free time working on them?",
-
-    UI_prof_gunsmith = "Gun Smith",
-    UI_profdesc_gunsmith = "You have a huge focus on ranged weaponary",
     
     UI_prof_vaga = "Vagabond",
     UI_profdesc_vaga = "You like to travel from place to place, and you find it easier to survive outdoors.",
+
+    UI_prof_builder = "Builder",
+    UI_profdesc_builder = "You focus on rebuilding destroyed buildings.",
+
+    UI_prof_thief = "Thief",
+    UI_profdesc_thief = "You have a big emphesis on sneaking and using smaller weapons.",
 }

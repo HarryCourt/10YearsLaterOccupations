@@ -8,7 +8,7 @@ local getProfession = ProfessionFramework.getProfession
 ProfessionFramework.RemoveDefaultProfessions = true
 
 addProfession('unemployed', {
-    name = "Unemployed",
+    name = "UI_prof_norole",
     icon = "",
     cost = 8,
 })
@@ -22,8 +22,7 @@ addProfession('common', {
         [Perks.Strength] = 2,
         [Perks.Fitness] = 2,
         [Perks.Aiming] = 2,
-        [Perks.Blunt] = 2,
-        [Perks.Blade] = 2,
+        [Perks.Melee] = 1,
     },
     traits = {"Brave"},
 })
@@ -36,12 +35,11 @@ addProfession('hardened', {
         [Perks.Sprinting] = 2,
         [Perks.Strength] = 3,
         [Perks.Fitness] = 3,
-        [Perks.Aiming] = 4,
+        [Perks.Aiming] = 5,
         [Perks.Reloading] = 2,
-        [Perks.Blunt] = 3,
-        [Perks.Blade] = 3,
-
+        [Perks.Melee] = 4,
     },
+    traits = {"Desensitized"},
 })
 
 
@@ -51,35 +49,47 @@ addProfession('medic', {
     cost = 6,
     xp = {
         [Perks.Doctor] = 5,
+        [Perks.Melee] = 3,
     },
-    traits = {"FirstAider"},
 })
 
-addProfession('scavenger', {
-    name = "UI_prof_scav",
-    icon = "prof_Knight",
-    cost = 6,
-    xp = {
-        [Perks.Sneak] = 5,
-        [Perks.Nimble] = 4,
-        
-    },
-})
 
 addProfession('vagabond', {
-    name = "UI_prof_vagabond",
+    name = "UI_prof_vaga",
     icon = "prof_Knight",
     cost = 0,
     xp = {
-        -- TODO: Add outdoor perks and benefits, add claustrophobia
-        [Perks.Fishing] = 4,
-        [Perks.Survival] = 3,
-        [Perks.Cooking] = 2,
+        [Perks.Survivalist] = 3,
+        [Perks.Cooking] = 3,
         [Perks.Trapping] = 4,
         [Perks.Lightfoot] = 4,
+        [Perks.Fishing] = 4,
     },
-    traits = {"NightOwl", "Herbalist", "Claustrophobic"},
+    traits = {"Herbalist"},
 })
---getProfession('common').xp[Perks.Axe] = 1
+
+addProfession('builder', {
+    name = "UI_prof_builder",
+    icon = "profession_constructionworker2",
+    cost = -4,
+    xp = {
+        [Perks.SmallBlunt] = 4,
+        [Perks.Woodwork] = 5,
+    }
+})
+addProfession('thief', {
+    name = "UI_prof_thief",
+    icon = "profession_burglar2",
+    cost = -4,
+    xp = {
+        [Perks.Nimble] = 2,
+        [Perks.Sneak] = 2,
+        [Perks.Lightfoot] = 2,
+        [Perks.Melee] = 2, 
+        [Perks.SmallBlunt] = 1,
+        [Perks.SmallBlade] = 3,
+    },
+    traits = {"Burglar"},
+})
 
 
