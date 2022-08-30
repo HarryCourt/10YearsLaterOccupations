@@ -1,6 +1,6 @@
 UI_EN = {
     UI_prof_norole = "No Role",
-    UI_profdesc_norole = "Create your own story here.",
+    UI_profdesc_norole = "",
 
     UI_prof_common = "Common Survivor",
     UI_profdesc_common = "You are the average run of the mill survivor. A bit of everything into one package.",
@@ -19,4 +19,20 @@ UI_EN = {
 
     UI_prof_thief = "Thief",
     UI_profdesc_thief = "You have a big emphesis on sneaking and using smaller weapons.",
+
+    UI_prof_scrapmech = "Scrap Mechanic",
+    UI_profdesc_scrapmech = "You are the goto person when it comes to fixing weapons, cars, or making weapons in general.",
+
+    UI_prof_psychotic = "Psychotic Survivor",
+    UI_profdesc_psychotic = "Destroyed by the apocylypse, you are more dangerous than the common survivor.",
+
+
+
+
+
+
+
+    UI_trait_psychotic = "Psychotic Survivor",
+    UI_traitdesc_psychotic = "Random bursts of giggling and laughter, and increased panic.",
+
 }
