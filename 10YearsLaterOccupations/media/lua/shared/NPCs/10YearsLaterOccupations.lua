@@ -33,6 +33,14 @@ addProfession('common', {
         [Perks.Blunt] = 2,
         [Perks.Blade] = 2,
     },
+    clothing = {
+        Hat = {"Base.Hat_Cowboy", "Base.Hat_Beany"},
+        Mask = {"Base.Hat_BandanaMask", "Base.Hat_BandanaMaskTINT"},
+        TorsoExtra = {"Base.Vest_BulletCivilian"},
+        FullHat = {"Base.Hat_CrashHelmetFULL", "Base.Hat_Army"},
+        Back = {"Base.Bag_DuffelBagTINT"},
+        Jacket = {"Base.Jacket_WhiteTINT"},
+    },
 })
 
 addProfession('hardened', {
@@ -47,6 +55,14 @@ addProfession('hardened', {
         [Perks.Reloading] = 2,
         [Perks.Blunt] = 3,
         [Perks.Blade] = 3,
+    },
+    clothing = {
+        Hat = {"Base.Hat_Cowboy", "Base.Hat_Beany"},
+        Mask = {"Base.Hat_BandanaMask", "Base.Hat_BandanaMaskTINT"},
+        TorsoExtra = {"Base.Vest_BulletArmy"},
+        FullHat = {"Base.Hat_CrashHelmetFULL", "Base.Hat_Army"},
+        Back = {"Base.Bag_DuffelBagTINT"},
+        Jacket = {"Base.Jacket_WhiteTINT"},
     },
     traits = {"Desensitized"},
 })
@@ -73,6 +89,9 @@ addProfession('medic', {
         [Perks.Doctor] = 7,
         [Perks.SmallBlade] = 3,
     },
+    clothing = {
+        Mask = {"Base.Hat_SurgicalMask_Blue", "Base.Hat_SurgicalMask_Green"},  
+    },
 })
 
 
@@ -91,6 +110,13 @@ addProfession('wanderer', {
         [Perks.Spear] = 2,
     },
     traits = {"Herbalist"},
+    recipes = {"Make Stick Trap", "Make Snare Trap", "Make Wooden Cage Trap", "Make Trap Box", "Make Cage Trap"},
+    clothing = {
+        Hat = {"Base.Hat_Raccoon", "Base.Hat_WinterHat"},
+        TorsoExtra = {"Base.Vest_Hunting_CamoGreen", "Base.Vest_Hunting_Camo"},
+        Pants = {"Base.Trousers_CamoGreen"},
+        Shoes = {"Base.Shoes_Wellies"},
+    },
 })
 
 addProfession('builder', {
@@ -118,6 +144,11 @@ addProfession('thief', {
         [Perks.SmallBlade] = 3,
     },
     traits = {"Burglar"},
+    clothing = {
+        Mask = {"Base.Hat_BalaclavaFull", "Base.Hat_BalaclavaFace", "Base.Hat_BandanaMask", "Base.Hat_BandanaMaskTINT"},
+        Back = {"Base.Bag_DuffelBagTINT"},
+        Jacket = {"Base.HoodieDOWN_WhiteTINT", "Base.HoodieUP_WhiteTINT"},
+    },
 })
 
 addProfession('scrapmech', {
@@ -129,6 +160,10 @@ addProfession('scrapmech', {
         [Perks.MetalWelding] = 4,
         [Perks.SmallBlunt] = 4,
         [Perks.Blunt] = 2,
+    },
+    clothing = {
+        Mask = {"Base.WeldingMask"},
+        FullSuit = {"Base.Boilersuit", "Base.Boilersuit_BlueRed"},
     },
     traits = {"Mechanics2"},
 })
