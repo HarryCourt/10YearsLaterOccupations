@@ -7,6 +7,9 @@ UI_EN = {
 
     UI_prof_hardened = "Hardened Survivor",
     UI_profdesc_hardened = "You have more skill and experience than the common survivor, with the downside of losing points a few more points.",
+
+    UI_prof_sharpshooter = "Sharp Shooter",
+    UI_profdesc_sharpshooter = "You are more proficient with firearms.",
     
     UI_prof_medic = "Medic",
     UI_profdesc_medic = "You have a huge focus on medicine.",

@@ -30,8 +30,8 @@ addProfession('common', {
         [Perks.Strength] = 2,
         [Perks.Fitness] = 2,
         [Perks.Aiming] = 2,
-        [Perks.Blunt] = 1,
-        [Perks.Blade] = 1,
+        [Perks.Blunt] = 2,
+        [Perks.Blade] = 2,
     },
     traits = {"Brave"},
 })
@@ -42,8 +42,8 @@ addProfession('hardened', {
     cost = -8,
     xp = {
         [Perks.Sprinting] = 2,
-        [Perks.Strength] = 3,
-        [Perks.Fitness] = 3,
+        [Perks.Strength] = 4,
+        [Perks.Fitness] = 4,
         [Perks.Aiming] = 5,
         [Perks.Reloading] = 2,
         [Perks.Blunt] = 3,
@@ -53,12 +53,26 @@ addProfession('hardened', {
 })
 
 
+addProfession('sharpshooter', {
+    name = "UI_prof_sharpshooter",
+    icon = "prof_Knight",
+    cost = -4,
+    xp = {
+        [Perks.Strength] = 2,
+        [Perks.Aiming] = 7,
+        [Perks.Reloading] = 5,
+        [Perks.Blunt] = 2,
+        [Perks.SmallBlunt] = 2,
+    },
+    traits = {"Brave"},
+})
+
 addProfession('medic', {
     name = "UI_prof_medic",
     icon = "prof_Knight",
-    cost = 6,
+    cost = -2,
     xp = {
-        [Perks.Doctor] = 5,
+        [Perks.Doctor] = 6,
         [Perks.SmallBlade] = 3,
     },
 })
@@ -74,6 +88,8 @@ addProfession('vagabond', {
         [Perks.Trapping] = 4,
         [Perks.Lightfoot] = 4,
         [Perks.Fishing] = 4,
+        [Perks.SmallBlade] = 2,
+        [Perks.Spear] = 2,
     },
     traits = {"Herbalist"},
 })
@@ -121,30 +137,22 @@ addProfession('scrapmech', {
 -- Suggested Job Idea:
 -- Psychotic Survivor
 -- + Psychotic trait, causes random bursts of panic and giggling.
--- Currently a WiP, needs to be worked on.
---[[
+--[[ Currently a WiP, needs to be worked on.
 addProfession('Psychotic', {
     name = "UI_prof_psychotic",
     icon = "prof_Knight",
     cost = -2,
     xp = {
-        [Perks.Electricity] = 3,
-        [Perks.Metalworking] = 4,
-        [Perks.SmallBlunt] = 4,
-        [Perks.Blunt] = 2,
+        --TODO: Add Traits here, probably something a serial killer would be good at.
     },
     traits = {"Psychotic"},
 })
-]]--
-
-
-
-
+]]
 
 
 ---------- TRAITS ------------
 
---TODO: Finish this up.
+--[[TODO: Finish this up.
 ProfessionFramework.addTrait('Psychotic', {
     name = "UI_trait_psychotic",
     description = "UI_traitdesc_psychotic",
@@ -153,13 +161,22 @@ ProfessionFramework.addTrait('Psychotic', {
     OnGameStart = function(trait)
         -- add a new event to trigger every ten minutes
         Events.EveryTenMinutes.Add(function()
-            local p = getSpecificPlayer(0)
+            local player = getSpecificPlayer(0)
             
-            -- If a 1/5 is rolled, then...
-            if ZombRand(4) < 1 then
-                -- TODO: Add character giggle, make sound radius
-                p:getStats():setPanic(90)
+            -- If a 1/4 is rolled, then...
+            if ZombRand(3) < 1 then
+                -- TODO: Add noise to attract zombies
+                local noiseToMake = ZombRand(3)
+
+                if noiseToMake == 0 then 
+                    player:Say("Heheh...")
+                    addSound(player, player.getLastPos().x, 0, player.getLastPos().z, 20, 10);
+                end
+                if noiseToMake == 1 then player:Say("*Giggles*") end
+                if noiseToMake == 2 then player:Say("Haha!") end
+                if noiseToMake == 3 then player:Say("*Snicker*") end
             end
         end)
     end
 })
+--]]
