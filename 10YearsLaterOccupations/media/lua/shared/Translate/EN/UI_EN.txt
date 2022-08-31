@@ -14,8 +14,8 @@ UI_EN = {
     UI_prof_medic = "Medic",
     UI_profdesc_medic = "You have a huge focus on medicine.",
     
-    UI_prof_vaga = "Vagabond",
-    UI_profdesc_vaga = "You like to travel from place to place, and you find it easier to survive outdoors.",
+    UI_prof_vaga = "Wanderer",
+    UI_profdesc_vaga = "Thanks to heavy vegetation, you thrive easier outside.",
 
     UI_prof_builder = "Builder",
     UI_profdesc_builder = "You focus on rebuilding destroyed buildings.",

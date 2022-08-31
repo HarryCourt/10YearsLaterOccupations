@@ -78,7 +78,7 @@ addProfession('medic', {
 })
 
 
-addProfession('vagabond', {
+addProfession('wanderer', {
     name = "UI_prof_vaga",
     icon = "prof_outsider",
     cost = 0,
@@ -96,7 +96,7 @@ addProfession('vagabond', {
 
 addProfession('builder', {
     name = "UI_prof_builder",
-    icon = "profession_constructionworker2",
+    icon = "prof_builder",
     cost = -4,
     xp = {
         [Perks.SmallBlunt] = 4,
@@ -107,7 +107,7 @@ addProfession('builder', {
 
 addProfession('thief', {
     name = "UI_prof_thief",
-    icon = "profession_burglar2",
+    icon = "prof_thief",
     cost = -6,
     xp = {
         [Perks.Nimble] = 2,
@@ -122,7 +122,7 @@ addProfession('thief', {
 
 addProfession('scrapmech', {
     name = "UI_prof_scrapmech",
-    icon = "profession_metalworker",
+    icon = "prof_scrapmech",
     cost = -6,
     xp = {
         [Perks.Electricity] = 3,
