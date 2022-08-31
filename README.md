@@ -5,6 +5,7 @@ TODO:
 * More Professions
 * Balancing
 * Custom Icons
+* Replace poster.png file.
 
 
 Planned (But not confirmed):
@@ -13,5 +14,5 @@ Planned (But not confirmed):
 
 How to install:
 1. Download the "10YearsLaterOccupations" folder
-2. Drop into C:\Users\USERNAME\Zomboid\Workshop
+2. Drop into C:\Users\USERNAME\Zomboid\mods
 3. Done :)
