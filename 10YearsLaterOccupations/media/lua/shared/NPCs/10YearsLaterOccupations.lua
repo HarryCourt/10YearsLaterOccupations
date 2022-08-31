@@ -33,16 +33,15 @@ addProfession('common', {
         [Perks.Blunt] = 2,
         [Perks.Blade] = 2,
     },
-    traits = {"Brave"},
 })
 
 addProfession('hardened', {
     name = "UI_prof_hardened",
     icon = "prof_hardened",
-    cost = -8,
+    cost = -12,
     xp = {
         [Perks.Sprinting] = 2,
-        [Perks.Strength] = 4,
+        [Perks.Strength] = 3,
         [Perks.Fitness] = 4,
         [Perks.Aiming] = 5,
         [Perks.Reloading] = 2,
@@ -64,7 +63,6 @@ addProfession('sharpshooter', {
         [Perks.Blunt] = 2,
         [Perks.SmallBlunt] = 2,
     },
-    traits = {"Brave"},
 })
 
 addProfession('medic', {
@@ -72,16 +70,16 @@ addProfession('medic', {
     icon = "prof_medic",
     cost = -2,
     xp = {
-        [Perks.Doctor] = 6,
+        [Perks.Doctor] = 7,
         [Perks.SmallBlade] = 3,
     },
 })
 
 
 addProfession('wanderer', {
-    name = "UI_prof_vaga",
+    name = "UI_prof_wanderer",
     icon = "prof_outsider",
-    cost = 0,
+    cost = -8,
     xp = {
         [Perks.Survivalist] = 3,
         [Perks.Cooking] = 3,
@@ -89,6 +87,7 @@ addProfession('wanderer', {
         [Perks.Lightfoot] = 4,
         [Perks.Fishing] = 4,
         [Perks.SmallBlade] = 2,
+        [Perks.Blade] = 2,
         [Perks.Spear] = 2,
     },
     traits = {"Herbalist"},
@@ -99,8 +98,9 @@ addProfession('builder', {
     icon = "prof_builder",
     cost = -4,
     xp = {
-        [Perks.SmallBlunt] = 4,
+        [Perks.SmallBlunt] = 3,
         [Perks.Woodwork] = 5,
+        [Perks.Strength] = 1,
     },
     traits = {"Handy"},
 })
@@ -108,7 +108,7 @@ addProfession('builder', {
 addProfession('thief', {
     name = "UI_prof_thief",
     icon = "prof_thief",
-    cost = -6,
+    cost = -8,
     xp = {
         [Perks.Nimble] = 2,
         [Perks.Sneak] = 2,

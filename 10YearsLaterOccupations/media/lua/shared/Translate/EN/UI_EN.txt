@@ -14,8 +14,8 @@ UI_EN = {
     UI_prof_medic = "Medic",
     UI_profdesc_medic = "You have a huge focus on medicine.",
     
-    UI_prof_vaga = "Wanderer",
-    UI_profdesc_vaga = "Thanks to heavy vegetation, you thrive easier outside.",
+    UI_prof_wanderer = "Wanderer",
+    UI_profdesc_wanderer = "You have adapted to the outside world, and have better chances surviving outdoors.",
 
     UI_prof_builder = "Builder",
     UI_profdesc_builder = "You focus on rebuilding destroyed buildings.",
@@ -24,18 +24,9 @@ UI_EN = {
     UI_profdesc_thief = "You have a big emphesis on sneaking and using smaller weapons.",
 
     UI_prof_scrapmech = "Scrap Mechanic",
-    UI_profdesc_scrapmech = "You are the goto person when it comes to fixing weapons, cars, or making weapons in general.",
+    UI_profdesc_scrapmech = "You are the goto person when it comes to fixing weapons, cars, or metal-working.",
 
     UI_prof_psychotic = "Psychotic Survivor",
     UI_profdesc_psychotic = "Destroyed by the apocylypse, you are more dangerous than the common survivor.",
-
-
-
-
-
-
-
-    UI_trait_psychotic = "Psychotic Survivor",
-    UI_traitdesc_psychotic = "Random bursts of giggling and laughter, and increased panic.",
 
 }
