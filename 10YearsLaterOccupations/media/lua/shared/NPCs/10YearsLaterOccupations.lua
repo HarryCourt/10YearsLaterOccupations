@@ -23,7 +23,7 @@ addProfession('unemployed', {
 
 addProfession('common', {
     name = "UI_prof_common",
-    icon = "prof_Knight",
+    icon = "prof_common",
     cost = 0,
     xp = {
         [Perks.Sprinting] = 1,
@@ -38,7 +38,7 @@ addProfession('common', {
 
 addProfession('hardened', {
     name = "UI_prof_hardened",
-    icon = "prof_Knight",
+    icon = "prof_hardened",
     cost = -8,
     xp = {
         [Perks.Sprinting] = 2,
@@ -55,7 +55,7 @@ addProfession('hardened', {
 
 addProfession('sharpshooter', {
     name = "UI_prof_sharpshooter",
-    icon = "prof_Knight",
+    icon = "prof_sharpshooter",
     cost = -4,
     xp = {
         [Perks.Strength] = 2,
@@ -69,7 +69,7 @@ addProfession('sharpshooter', {
 
 addProfession('medic', {
     name = "UI_prof_medic",
-    icon = "prof_Knight",
+    icon = "prof_medic",
     cost = -2,
     xp = {
         [Perks.Doctor] = 6,
@@ -80,7 +80,7 @@ addProfession('medic', {
 
 addProfession('vagabond', {
     name = "UI_prof_vaga",
-    icon = "prof_Knight",
+    icon = "prof_outsider",
     cost = 0,
     xp = {
         [Perks.Survivalist] = 3,
@@ -101,7 +101,7 @@ addProfession('builder', {
     xp = {
         [Perks.SmallBlunt] = 4,
         [Perks.Woodwork] = 5,
-    }
+    },
     traits = {"Handy"},
 })
 
@@ -113,7 +113,7 @@ addProfession('thief', {
         [Perks.Nimble] = 2,
         [Perks.Sneak] = 2,
         [Perks.Lightfoot] = 2,
-        [Perks.Melee] = 2, 
+        --[Perks.Melee] = 2, 
         [Perks.SmallBlunt] = 1,
         [Perks.SmallBlade] = 3,
     },
@@ -122,15 +122,15 @@ addProfession('thief', {
 
 addProfession('scrapmech', {
     name = "UI_prof_scrapmech",
-    icon = "profession_burglar2",
+    icon = "profession_metalworker",
     cost = -6,
     xp = {
         [Perks.Electricity] = 3,
-        [Perks.Metalworking] = 4,
+        [Perks.MetalWelding] = 4,
         [Perks.SmallBlunt] = 4,
         [Perks.Blunt] = 2,
     },
-    traits = {"AmateurMechanic"},
+    traits = {"Mechanics2"},
 })
 
 
