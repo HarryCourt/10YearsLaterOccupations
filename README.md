@@ -4,7 +4,6 @@ A Work-In-Progress Project Zomboid mod for occupations that are based for the 10
 TODO:
 * More Professions
 * Balancing
-* Replace poster.png file.
 * Items on Spawn (Might want to seperate as seperate mod file)
 
 
