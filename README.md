@@ -2,9 +2,11 @@
 A Work-In-Progress Project Zomboid mod for occupations that replace the vanilla professions for ones that are more 10 years later friendly.
 
 Planned Features:
-* More Professions
+* More Professions;
+  * Redesigning professions to fit a specific playstyle (eg. Wanderers being claustrophobic to encourage wilderness play.)
+  * Faction based professions, such as Bandits and Heroes
 * Balancing trait points, experience, etc
-* More clothes for players.
+* More clothing options for players.
 
 In Consideration:
 * Compatability with More Traits mod.
