@@ -26,6 +26,15 @@ UI_EN = {
     UI_prof_scrapmech = "Scrap Mechanic",
     UI_profdesc_scrapmech = "You are the goto person when it comes to fixing weapons, cars, or metal-working.",
 
+    UI_prof_bandit = "Bandit",
+    UI_profdesc_bandit = "You work with other cultists to rob, decieve, and hurt other survivors.",
+
+    UI_prof_hero = "Hero",
+    UI_profdesc_hero = "You work with other heros to aid, help and assist other survivors.",
+
+
+
+
     UI_prof_psychotic = "Psychotic Survivor",
     UI_profdesc_psychotic = "Destroyed by the apocylypse, you are more dangerous than the common survivor.",
 

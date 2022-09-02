@@ -64,7 +64,7 @@ addProfession('hardened', {
         Back = {"Base.Bag_DuffelBagTINT"},
         Jacket = {"Base.Jacket_WhiteTINT"},
     },
-    traits = {"Desensitized"},
+    --traits = {"Desensitized"},
 })
 
 
@@ -128,7 +128,7 @@ addProfession('builder', {
         [Perks.Woodwork] = 5,
         [Perks.Strength] = 1,
     },
-    traits = {"Handy"},
+    --traits = {"Handy"},
 })
 
 addProfession('thief', {
@@ -168,6 +168,41 @@ addProfession('scrapmech', {
     traits = {"Mechanics2"},
 })
 
+-------------------------------------------
+-- Roleplay Professions
+-- These professions are currently a work in progress, and shouldn't be enabled.
+-------------------------------------------
+
+if getActivatedMods():contains("10YearsLaterOccupationsRP") == true then
+    -- Hero
+    addProfession('hero', {
+        name = "UI_prof_hero",
+        icon = "prof_common",
+        cost = 0,
+        xp = {
+        },
+        -- TODO: Clothing contains rare/unique, but heroic item
+        clothing = {
+            Hat = {"Base.Hat_Cowboy", "Base.Hat_Beany"},
+            Mask = {"Base.Hat_BandanaMask", "Base.Hat_BandanaMaskTINT"},
+            TorsoExtra = {"Base.Vest_BulletCivilian"},
+            FullHat = {"Base.Hat_CrashHelmetFULL", "Base.Hat_Army"},
+            Back = {"Base.Bag_DuffelBagTINT"},
+            Jacket = {"Base.Jacket_WhiteTINT"},
+        },
+        traits = {},
+    })
+
+    -- Bandit Role
+    addProfession('bandit', {
+        name = "UI_prof_bandit",
+        icon = "prof_common",
+        cost = -2,
+        xp = {
+        },
+        traits = {},
+    })
+end
 
 -- Suggested Job Idea:
 -- Psychotic Survivor
