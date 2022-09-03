@@ -13,7 +13,9 @@ ProfessionFramework.RemoveDefaultProfessions = true
 -- Originally created by Harry.
 -- Additional help by ADD, NAME, HERE
 ---------------------------------------------------------------
-
+-- TODO:
+-- 1. We should make a seperate lua file for traits and how they work to keep this lua file clean and tidy.
+-- 2. Add more clothing options.
 
 addProfession('unemployed', {
     name = "UI_prof_norole",
@@ -109,7 +111,6 @@ addProfession('wanderer', {
         [Perks.Blade] = 2,
         [Perks.Spear] = 2,
     },
-    traits = {"Herbalist"},
     recipes = {"Make Stick Trap", "Make Snare Trap", "Make Wooden Cage Trap", "Make Trap Box", "Make Cage Trap"},
     clothing = {
         Hat = {"Base.Hat_Raccoon", "Base.Hat_WinterHat"},
@@ -131,6 +132,24 @@ addProfession('builder', {
     --traits = {"Handy"},
 })
 
+addProfession('primhunter', {
+    name = "UI_prof_primhunter",
+    icon = "prof_scrapmech",
+    cost = -6,
+    xp = {
+        [Perks.Electricity] = 3,
+        [Perks.MetalWelding] = 4,
+        [Perks.SmallBlunt] = 4,
+        [Perks.Blunt] = 2,
+    },
+    clothing = {
+        Mask = {"Base.WeldingMask"},
+        FullSuit = {"Base.Boilersuit", "Base.Boilersuit_BlueRed"},
+    },
+    traits = {"Mechanics2"},
+})
+
+
 addProfession('thief', {
     name = "UI_prof_thief",
     icon = "prof_thief",
@@ -144,6 +163,23 @@ addProfession('thief', {
         [Perks.SmallBlade] = 3,
     },
     traits = {"Burglar"},
+    clothing = {
+        Mask = {"Base.Hat_BalaclavaFull", "Base.Hat_BalaclavaFace", "Base.Hat_BandanaMask", "Base.Hat_BandanaMaskTINT"},
+        Back = {"Base.Bag_DuffelBagTINT"},
+        Jacket = {"Base.HoodieDOWN_WhiteTINT", "Base.HoodieUP_WhiteTINT"},
+    },
+})
+
+addProfession('cultist', {
+    name = "UI_prof_cultist",
+    icon = "prof_thief",
+    cost = -8,
+    xp = {
+        [Perks.Nimble] = 2,
+        [Perks.Sneak] = 2,
+        [Perks.Lightfoot] = 2,
+        [Perks.SmallBlade] = 3,
+    },
     clothing = {
         Mask = {"Base.Hat_BalaclavaFull", "Base.Hat_BalaclavaFace", "Base.Hat_BandanaMask", "Base.Hat_BandanaMaskTINT"},
         Back = {"Base.Bag_DuffelBagTINT"},
@@ -250,3 +286,20 @@ ProfessionFramework.addTrait('Psychotic', {
     end
 })
 --]]
+
+
+ProfessionFramework.addTrait('Cultist', {
+    name = "UI_trait_psychotic",
+    description = "UI_traitdesc_psychotic",
+    cost = 0,
+    OnGameStart = function(trait)
+        -- add a new event to trigger every ten minutes
+        Events.OnWeaponHitCharacter.Add(function()
+                --TODO: Make all weapons besides Short Bladed weapons do 25% of damage they usually do.
+                
+            end
+        end)
+    end
+})
+
+

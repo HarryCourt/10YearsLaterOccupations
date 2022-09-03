@@ -20,6 +20,9 @@ UI_EN = {
     UI_prof_builder = "Builder",
     UI_profdesc_builder = "You focus on rebuilding destroyed buildings.",
 
+    UI_prof_primhunter = "Primitive Hunter",
+    UI_profdesc_primhunter = "You have a big emphesis on sneaking and using smaller weapons.",
+
     UI_prof_thief = "Thief",
     UI_profdesc_thief = "You have a big emphesis on sneaking and using smaller weapons.",
 
@@ -32,10 +35,17 @@ UI_EN = {
     UI_prof_hero = "Hero",
     UI_profdesc_hero = "You work with other heros to aid, help and assist other survivors.",
 
+    UI_prof_cultist = "Cultist",
+    UI_profdesc_primhunter = "Help fellow cultists and raise to supremecy by rallying others",
 
+    UI_trait_cultist = "Cultist",
+    UI_traitdesc_psychotic = "Small-bladed weapons have a damage increase, while others have been reduced.",
 
 
     UI_prof_psychotic = "Psychotic Survivor",
     UI_profdesc_psychotic = "Destroyed by the apocylypse, you are more dangerous than the common survivor.",
+
+    
+
 
 }
