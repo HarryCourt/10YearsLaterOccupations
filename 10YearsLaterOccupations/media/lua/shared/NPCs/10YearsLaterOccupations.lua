@@ -40,7 +40,7 @@ addProfession('common', {
         Mask = {"Base.Hat_BandanaMask", "Base.Hat_BandanaMaskTINT"},
         TorsoExtra = {"Base.Vest_BulletCivilian"},
         FullHat = {"Base.Hat_CrashHelmetFULL", "Base.Hat_Army"},
-        Back = {"Base.Bag_DuffelBagTINT"},
+        Back = {"Base.Bag_Schoolbag"},
         Jacket = {"Base.Jacket_WhiteTINT"},
     },
 })
@@ -66,7 +66,7 @@ addProfession('hardened', {
         Back = {"Base.Bag_DuffelBagTINT"},
         Jacket = {"Base.Jacket_WhiteTINT"},
     },
-    --traits = {"Desensitized"},
+    traits = {"Desensitized"},
 })
 
 
@@ -97,12 +97,12 @@ addProfession('medic', {
 })
 
 
-addProfession('wanderer', {
+addProfession('nimrod', {
     name = "UI_prof_wanderer",
-    icon = "prof_outsider",
+    icon = "prof_wanderer",
     cost = -8,
     xp = {
-        [Perks.Survivalist] = 3,
+        [Perks.PlantScavenging] = 3,
         [Perks.Cooking] = 3,
         [Perks.Trapping] = 4,
         [Perks.Lightfoot] = 4,
@@ -132,23 +132,6 @@ addProfession('builder', {
     --traits = {"Handy"},
 })
 
-addProfession('primhunter', {
-    name = "UI_prof_primhunter",
-    icon = "prof_scrapmech",
-    cost = -6,
-    xp = {
-        [Perks.Electricity] = 3,
-        [Perks.MetalWelding] = 4,
-        [Perks.SmallBlunt] = 4,
-        [Perks.Blunt] = 2,
-    },
-    clothing = {
-        Mask = {"Base.WeldingMask"},
-        FullSuit = {"Base.Boilersuit", "Base.Boilersuit_BlueRed"},
-    },
-    traits = {"Mechanics2"},
-})
-
 
 addProfession('thief', {
     name = "UI_prof_thief",
@@ -159,8 +142,8 @@ addProfession('thief', {
         [Perks.Sneak] = 2,
         [Perks.Lightfoot] = 2,
         --[Perks.Melee] = 2, 
-        [Perks.SmallBlunt] = 1,
-        [Perks.SmallBlade] = 3,
+        [Perks.SmallBlunt] = 2,
+        [Perks.SmallBlade] = 4,
     },
     traits = {"Burglar"},
     clothing = {
@@ -170,38 +153,43 @@ addProfession('thief', {
     },
 })
 
+--[[
 addProfession('cultist', {
     name = "UI_prof_cultist",
     icon = "prof_thief",
-    cost = -8,
+    cost = 0,
     xp = {
         [Perks.Nimble] = 2,
         [Perks.Sneak] = 2,
         [Perks.Lightfoot] = 2,
         [Perks.SmallBlade] = 3,
     },
+    traits = {"Cultist"},
     clothing = {
-        Mask = {"Base.Hat_BalaclavaFull", "Base.Hat_BalaclavaFace", "Base.Hat_BandanaMask", "Base.Hat_BandanaMaskTINT"},
+        Hat = {"Base.Hat_TinFoilHat"}
+        Mask = {"Base.HockeyMask"},
         Back = {"Base.Bag_DuffelBagTINT"},
-        Jacket = {"Base.HoodieDOWN_WhiteTINT", "Base.HoodieUP_WhiteTINT"},
+        Jacket = {"Base.JacketLong_Random"},
     },
 })
-
+]]
 addProfession('scrapmech', {
     name = "UI_prof_scrapmech",
     icon = "prof_scrapmech",
-    cost = -6,
+    cost = -4,
     xp = {
         [Perks.Electricity] = 3,
         [Perks.MetalWelding] = 4,
         [Perks.SmallBlunt] = 4,
         [Perks.Blunt] = 2,
+        [Perks.Mechanics] = 4,
     },
     clothing = {
         Mask = {"Base.WeldingMask"},
         FullSuit = {"Base.Boilersuit", "Base.Boilersuit_BlueRed"},
     },
     traits = {"Mechanics2"},
+    recipes = { "Basic Mechanics", "Intermediate Mechanics" },
 })
 
 -------------------------------------------
@@ -286,20 +274,72 @@ ProfessionFramework.addTrait('Psychotic', {
     end
 })
 --]]
+ 
+
+--[[
+function CultistAttack(_player)
+    local player = _player;
+    -- If the player is a cultist.
+    if player:HasTrait("Cultist") then
+        if player:getPrimaryHandItem() ~= nil then
+            local wpnInHand = player:getPrimaryHandItem():getType()
+            local wpn = player:getPrimaryHandItem();
+            
+            -- Note: Some of these weapons are using different values than their vanilla counterparts. Just ignore for now :)
+            if wpnInHand == "KitchenKnife" or wpnInHand == "Screwdriver" or wpnInHand == "Stake" then
+                wpn:setMinDamage(0.3 * 3.0);
+                wpn:setMaxDamage(0.7 * 3.0);
+                wpn:setCriticalChance(75);
+            elseif wpnInHand == "HandScythe" or wpnInHand == "HuntingKnife" then
+                wpn:setMinDamage(0.6 * 3.0);
+                wpn:setMaxDamage(1.2 * 3.0);
+                wpn:setCriticalChance(75);
+            elseif wpnInHand == "FlintKnife" or wpnInHand == "MeatCleaver" then
+                wpn:setMinDamage(0.4 * 3.0);
+                wpn:setMaxDamage(0.8 * 3.0);
+                wpn:setCriticalChance(75);
+            end
+        end
+    -- If not, revert values back!
+    else
+        if player:getPrimaryHandItem() ~= nil then
+            local wpnInHand = player:getPrimaryHandItem():getType()
+            local wpn = player:getPrimaryHandItem();
+
+            -- Note: Some of these weapons are using different values than their vanilla counterparts. Just ignore for now :)
+            if wpnInHand == "KitchenKnife" or wpnInHand == "Screwdriver" or wpnInHand == "Stake" then
+                wpn:setMinDamage(0.3);
+                wpn:setMaxDamage(0.7);
+                wpn:setCriticalChance(12);
+
+            elseif wpnInHand == "HandScythe" or wpnInHand == "HuntingKnife" then
+                wpn:setMinDamage(0.6);
+                wpn:setMaxDamage(1.2);
+
+                if wpnInHand == "HuntingKnife"
+                    wpn:setCriticalChance(50)
+                else
+                    wpn:setCriticalChance(15)
+                end
+
+            elseif wpnInHand == "FlintKnife" or wpnInHand == "MeatCleaver" then
+                wpn:setMinDamage(0.4);
+                wpn:setMaxDamage(0.8);
+                wpn:setCriticalChance(15);
+            end
+        end
+    end
+end
+]]
 
 
 ProfessionFramework.addTrait('Cultist', {
-    name = "UI_trait_psychotic",
-    description = "UI_traitdesc_psychotic",
+    name = "UI_trait_cultist",
+    description = "Knives, Meat Cleavers, Stakes, and Hand Scythes deal 3x damage, and have higher chances to critical hit.",
     cost = 0,
     OnGameStart = function(trait)
-        -- add a new event to trigger every ten minutes
-        Events.OnWeaponHitCharacter.Add(function()
-                --TODO: Make all weapons besides Short Bladed weapons do 25% of damage they usually do.
-                
-            end
-        end)
     end
 })
-
-
+ 
+Events.OnWeaponHitCharacter.Add(CultistAttack)
+ 

@@ -14,7 +14,7 @@ UI_EN = {
     UI_prof_medic = "Medic",
     UI_profdesc_medic = "You have a huge focus on medicine.",
     
-    UI_prof_wanderer = "Wanderer",
+    UI_prof_wanderer = "Nimrod",
     UI_profdesc_wanderer = "You have adapted to the outside world, and have better chances surviving outdoors.",
 
     UI_prof_builder = "Builder",
@@ -36,10 +36,10 @@ UI_EN = {
     UI_profdesc_hero = "You work with other heros to aid, help and assist other survivors.",
 
     UI_prof_cultist = "Cultist",
-    UI_profdesc_primhunter = "Help fellow cultists and raise to supremecy by rallying others",
+    UI_profdesc_cultist = "Help fellow cultists and raise to supremecy by rallying others",
 
     UI_trait_cultist = "Cultist",
-    UI_traitdesc_psychotic = "Small-bladed weapons have a damage increase, while others have been reduced.",
+    UI_traitdesc_cultist = "Small-bladed weapons deal twice as much damage, but all other weapons deal halve.",
 
 
     UI_prof_psychotic = "Psychotic Survivor",
