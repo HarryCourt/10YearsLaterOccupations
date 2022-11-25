@@ -1,0 +1,34 @@
+UI_CN = {
+    UI_prof_norole = "无职业",
+    UI_profdesc_norole = "",
+
+    UI_prof_common = "普通幸存者",
+    UI_profdesc_common = "你是一个普通幸存者，平平无奇但样样技巧雨露均沾。",
+
+    UI_prof_hardened = "硬汉幸存者",
+    UI_profdesc_hardened = "你比普通幸存者拥有更多技能和经验，但也因此失去更多点数。<br>你知道如何操作发电机。",
+
+    UI_prof_sharpshooter = "神枪手",
+    UI_profdesc_sharpshooter = "你更加熟练火器的运用，并且知道如何更有效的操控它们。",
+
+    UI_prof_medic = "医师",
+    UI_profdesc_medic = "你拥有更多使用医疗物品的知识。",
+
+    UI_prof_nimrod = "隐士",
+    UI_profdesc_nimrod = "你适应了野外世界，并且能在户外更好的生存。",
+
+    UI_prof_cook = "厨师",
+    UI_profdesc_cook = "你懂得如何从后末日垃圾中做出美味的食物。",
+
+    UI_prof_farmer = "农夫",
+    UI_profdesc_farmer = "你是让农作物健康成长的好手，并且像是狩猎和钓鱼这种杂活也不在话下。",
+
+    UI_prof_builder = "建筑师",
+    UI_profdesc_builder = "你专注于重建肯塔基被毁灭的文明。<br>你知道如何操作发电机。",
+
+    UI_prof_thief = "窃贼",
+    UI_profdesc_thief = "你有更高的潜行等级，并且更加熟练小型刃器的使用。<br>你可以短接车辆。",
+
+    UI_prof_scrapmech = "废料技师",
+    UI_profdesc_scrapmech = "你专注于制造和修复任何金属制品。<br>你知道如何操作发电机。",
+}
